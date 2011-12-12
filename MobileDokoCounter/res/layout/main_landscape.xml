@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+        android:padding="10px" >
+
+
+<TableLayout android:id="@+id/main_tablayout"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:stretchColumns="0,1,2">
+
+    <TableRow>
+        <Button android:background="@drawable/karo_koenig"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/button_koenig"/>
+
+        <Button android:background="@drawable/kreuz_dame"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/button_dame"/>
+
+        <Button android:background="@drawable/kreuz_bube"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/button_bube"/>
+        
+    </TableRow>
+
+    <TableRow >
+
+        <Button android:background="@drawable/karo_ass"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/button_ass"/>
+
+        <Button android:background="@drawable/karo10"
+                android:id="@+id/button_karte10"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"/>
+
+
+                <Button android:text="Reset"
+                        android:id="@+id/button_reset"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"/>
+                
+
+    </TableRow>
+
+</TableLayout>
+
+<LinearLayout android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/main_tablayout"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="5dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:orientation="horizontal">
+
+
+    <TextView android:text="Punkte:"
+              android:textSize="18dp"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+            />
+
+    <TextView android:text="0"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:layout_marginLeft="15dp"
+              android:textSize="18dp"
+              android:textStyle="bold"
+              android:id="@+id/textview_punkte" />
+
+</LinearLayout>
+</RelativeLayout>
