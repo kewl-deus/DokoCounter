@@ -1,83 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="fill_parent"
-             android:layout_height="fill_parent"
-             android:stretchColumns="0,1"
-             >
+             android:layout_height="match_parent"
+             android:stretchColumns="0,1">
 
     <TableRow>
-        <Button android:background="@drawable/karo_koenig"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:id="@+id/button_koenig"/>
+        <ImageButton android:id="@+id/button_king"/>
 
-        <Button android:background="@drawable/kreuz_dame"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:id="@+id/button_dame"/>
+        <ImageButton android:id="@+id/button_queen"/>
 
     </TableRow>
 
     <TableRow >
-        <Button android:background="@drawable/kreuz_bube"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:id="@+id/button_bube"/>
+        <ImageButton android:id="@+id/button_jack"/>
 
-        <Button android:background="@drawable/karo_ass"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:id="@+id/button_ass"/>
+        <ImageButton android:id="@+id/button_ace"/>
     </TableRow>
 
     <TableRow>
-        <Button android:background="@drawable/karo10"
-                android:id="@+id/button_karte10"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:gravity="center"/>
+        <ImageButton android:id="@+id/button_num10"/>
 
-        <Button android:text="Reset"
-                android:id="@+id/button_reset"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_height="fill_parent"
-                android:layout_width="fill_parent"/>
+        <Button android:id="@+id/button_reset"
+                android:text="Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                />
     </TableRow>
 
     <TableRow>
         <TextView android:text="Punkte:"
-                  android:textSize="18dp"
-                  android:layout_marginTop="5dp"
-                  android:layout_marginBottom="5dp"
-                  android:layout_marginLeft="30dp"
-                  android:layout_marginRight="30dp"/>
+                  android:textSize="18sp"
+                />
 
-        <TextView android:text="0"
-                  android:textSize="18dp"
+        <TextView android:id="@+id/textview_points"
+                  android:text="0"
+                  android:textSize="18sp"
                   android:textStyle="bold"
-                  android:layout_marginTop="5dp"
-                  android:layout_marginBottom="5dp"
-                  android:layout_marginLeft="30dp"
-                  android:layout_marginRight="30dp"
-                  android:id="@+id/textview_punkte" />
+                />
     </TableRow>
 
 </TableLayout>

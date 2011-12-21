@@ -11,34 +11,52 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int karo10=0x7f020000;
-        public static final int karo9=0x7f020001;
-        public static final int karo_ass=0x7f020002;
-        public static final int karo_bube=0x7f020003;
-        public static final int karo_dame=0x7f020004;
-        public static final int karo_koenig=0x7f020005;
-        public static final int kreuz10=0x7f020006;
-        public static final int kreuz9=0x7f020007;
-        public static final int kreuz_ass=0x7f020008;
-        public static final int kreuz_bube=0x7f020009;
-        public static final int kreuz_dame=0x7f02000a;
-        public static final int kreuz_koenig=0x7f02000b;
+        public static final int suits=0x7f020000;
     }
     public static final class id {
-        public static final int button_ass=0x7f050004;
-        public static final int button_bube=0x7f050003;
-        public static final int button_dame=0x7f050002;
-        public static final int button_karte10=0x7f050005;
-        public static final int button_koenig=0x7f050001;
-        public static final int button_reset=0x7f050006;
-        public static final int main_tablayout=0x7f050000;
-        public static final int textview_punkte=0x7f050007;
+        public static final int button_ace=0x7f060004;
+        public static final int button_jack=0x7f060003;
+        public static final int button_king=0x7f060001;
+        public static final int button_num10=0x7f060005;
+        public static final int button_queen=0x7f060002;
+        public static final int button_reset=0x7f060006;
+        public static final int table_main=0x7f060000;
+        public static final int textview_points=0x7f060007;
     }
     public static final class layout {
         public static final int main_landscape=0x7f030000;
         public static final int main_portrait=0x7f030001;
     }
-    public static final class string {
-        public static final int app_name=0x7f040000;
+    public static final class raw {
+        public static final int card_club_10=0x7f040000;
+        public static final int card_club_ace=0x7f040001;
+        public static final int card_club_jack=0x7f040002;
+        public static final int card_club_king=0x7f040003;
+        public static final int card_club_queen=0x7f040004;
+        public static final int card_club_text=0x7f040005;
     }
+    public static final class string {
+        public static final int app_name=0x7f050000;
+    }
+    public static final class styleable {
+        /** Attributes that can be used with a SVGImageButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SVGImageButton_android_src de.dengot.dokocounter:android_src}</code></td><td></td></tr>
+           </table>
+           @see #SVGImageButton_android_src
+         */
+        public static final int[] SVGImageButton = {
+            0x01010119
+        };
+        /**
+          <p>This symbol is the offset where the {@link de.dengot.dokocounter.R.attr#android_src}
+          attribute's value can be found in the {@link #SVGImageButton} array.
+          @attr name android:android_src
+        */
+        public static final int SVGImageButton_android_src = 0;
+    };
 }

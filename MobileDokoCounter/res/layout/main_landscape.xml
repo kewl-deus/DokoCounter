@@ -1,100 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-        android:padding="10px" >
-
-
-<TableLayout android:id="@+id/main_tablayout"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/table_main"
              android:layout_width="fill_parent"
-             android:layout_height="wrap_content"
-             android:stretchColumns="0,1,2">
+             android:layout_height="fill_parent"
+             android:stretchColumns="1">
 
+    <TableRow android:layout_weight="1.0"
+              android:layout_height="fill_parent">
+
+        <de.dengot.dokocounter.SVGImageButton android:id="@+id/button_king" android:src="@raw/card_club_10"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:layout_gravity="center"
+                     android:scaleType="fitXY"
+                />
+
+        <de.dengot.dokocounter.SVGImageButton android:id="@+id/button_queen" android:src="@raw/card_club_10"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:layout_gravity="center"
+                     android:scaleType="fitStart"
+                />
+
+        <de.dengot.dokocounter.SVGImageButton android:id="@+id/button_jack" android:src="@raw/card_club_10"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:layout_gravity="center"
+                     android:scaleType="fitCenter"
+                />
+    </TableRow>
+
+    <TableRow android:layout_weight="1.0"
+              android:layout_height="fill_parent">
+
+        <de.dengot.dokocounter.SVGImageButton android:id="@+id/button_ace" android:src="@raw/card_club_10"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:layout_gravity="center"
+                     android:scaleType="center"
+                />
+
+        <de.dengot.dokocounter.SVGImageButton android:id="@+id/button_num10" android:src="@raw/card_club_10"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:layout_gravity="center"
+                     android:scaleType="centerInside"
+                />
+
+        <Button android:id="@+id/button_reset"
+                android:text="Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                />
+    </TableRow>
+
+    <!--
     <TableRow>
-        <Button android:background="@drawable/karo_koenig"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:id="@+id/button_koenig"/>
+        <TextView android:text="Punkte:"
+                  android:textSize="18sp"
+                />
 
-        <Button android:background="@drawable/kreuz_dame"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:id="@+id/button_dame"/>
-
-        <Button android:background="@drawable/kreuz_bube"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:id="@+id/button_bube"/>
-        
+        <TextView android:id="@+id/textview_points"
+                  android:text="0"
+                  android:textSize="18sp"
+                  android:textStyle="bold"
+                />
     </TableRow>
-
-    <TableRow >
-
-        <Button android:background="@drawable/karo_ass"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:id="@+id/button_ass"/>
-
-        <Button android:background="@drawable/karo10"
-                android:id="@+id/button_karte10"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:gravity="center"/>
-
-
-                <Button android:text="Reset"
-                        android:id="@+id/button_reset"
-                        android:gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_height="fill_parent"
-                        android:layout_width="fill_parent"/>
-                
-
-    </TableRow>
+    -->
 
 </TableLayout>
-
-<LinearLayout android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_below="@id/main_tablayout"
-              android:layout_marginTop="5dp"
-              android:layout_marginBottom="5dp"
-              android:layout_marginLeft="15dp"
-              android:layout_marginRight="15dp"
-              android:orientation="horizontal">
-
-
-    <TextView android:text="Punkte:"
-              android:textSize="18dp"
-              android:layout_width="wrap_content"
-              android:layout_height="fill_parent"
-            />
-
-    <TextView android:text="0"
-              android:layout_width="wrap_content"
-              android:layout_height="fill_parent"
-              android:layout_marginLeft="15dp"
-              android:textSize="18dp"
-              android:textStyle="bold"
-              android:id="@+id/textview_punkte" />
-
-</LinearLayout>
-</RelativeLayout>
