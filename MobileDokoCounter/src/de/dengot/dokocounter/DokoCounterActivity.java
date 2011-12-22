@@ -2,7 +2,6 @@ package de.dengot.dokocounter;
 
 import android.app.Activity;
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.*;
 import com.larvalabs.svgandroid.SVG;
 import com.larvalabs.svgandroid.SVGParser;
+
+import java.text.MessageFormat;
 
 public class DokoCounterActivity extends Activity {
     private int points;
@@ -35,11 +36,17 @@ public class DokoCounterActivity extends Activity {
         this.points = 0;
         this.pointView = (TextView) findViewById(R.id.textview_points);
 
-//        initCardButton(R.id.button_king, R.raw.card_club_king, 4);
-//        initCardButton(R.id.button_queen, R.raw.card_club_queen, 3);
-//        initCardButton(R.id.button_jack, R.raw.card_club_jack, 2);
-//        initCardButton(R.id.button_ace, R.raw.card_club_ace, 11);
-//        initCardButton(R.id.button_num10, R.raw.card_club_10, 10);
+        initBmpCardButton(R.id.button_king, R.drawable.king, 4);
+        initBmpCardButton(R.id.button_queen, R.drawable.queen, 3);
+        initBmpCardButton(R.id.button_jack, R.drawable.jack, 2);
+        initBmpCardButton(R.id.button_ace, R.drawable.ace, 11);
+        initBmpCardButton(R.id.button_num10, R.drawable.ten, 10);
+
+//        initSvgCardButton(R.id.button_king, R.raw.card_club_king, 4);
+//        initSvgCardButton(R.id.button_queen, R.raw.card_club_queen, 3);
+//        initSvgCardButton(R.id.button_jack, R.raw.card_club_jack, 2);
+//        initSvgCardButton(R.id.button_ace, R.raw.card_club_ace, 11);
+//        initSvgCardButton(R.id.button_num10, R.raw.card_club_10, 10);
 
         Button resetButton = (Button) findViewById(R.id.button_reset);
         resetButton.setOnClickListener(new View.OnClickListener() {
@@ -58,8 +65,6 @@ public class DokoCounterActivity extends Activity {
     private void createLandscapeMode() {
         Log.v("Orientation", "Landscape");
         setContentView(R.layout.main_landscape);
-        //GridView gridview = (GridView) findViewById(R.id.landscape_grid);
-        //gridview.setAdapter(new CardImageAdapter(this));
     }
 
     private void resetPoints() {
@@ -69,29 +74,30 @@ public class DokoCounterActivity extends Activity {
 
     private void addPoints(int value) {
         this.points += value;
+        //overflow control
+        if (this.points > 999 || this.points < 0){
+            this.points = 0;
+        }
         updatePointView();
     }
 
     private void updatePointView() {
         //setText(int) is reserved for string resource ids
-        pointView.setText(Integer.toString(this.points));
+        pointView.setText(MessageFormat.format("Punkte: {0,number,000}", this.points));
     }
 
-    private void initCardButton(int buttonId, int imageId, int cardValue) {
-        ImageButton cardButton = (ImageButton) findViewById(buttonId);
+    private void initSvgCardButton(int buttonId, int imageId, int cardValue) {
+        ImageView cardButton = (ImageView) findViewById(buttonId);
         cardButton.setOnClickListener(new PointAddClickListener(cardValue));
-
-        cardButton.setBackgroundColor(Color.WHITE);
-
-        //TODO fix after debug
-        imageId = R.raw.card_club_ace;
-
         SVG svg = SVGParser.getSVGFromResource(getResources(), imageId);
-
-
         cardButton.setImageDrawable(svg.createPictureDrawable());
     }
 
+    private void initBmpCardButton(int buttonId, int imageId, int cardValue) {
+        ImageView cardButton = (ImageView) findViewById(buttonId);
+        cardButton.setOnClickListener(new PointAddClickListener(cardValue));
+        cardButton.setImageDrawable(getResources().getDrawable(imageId));
+    }
 
     /*
     * Walks through the objects tree

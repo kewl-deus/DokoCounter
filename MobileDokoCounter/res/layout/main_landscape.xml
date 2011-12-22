@@ -2,63 +2,154 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:id="@+id/table_main"
              android:layout_width="fill_parent"
-             android:layout_height="fill_parent"
-             android:stretchColumns="1">
+             android:layout_height="match_parent"
+             >
 
-    <TableRow android:layout_weight="1.0"
-              android:layout_height="fill_parent">
+    <TableRow >
 
-        <de.dengot.dokocounter.SVGImageButton android:id="@+id/button_king" android:src="@raw/card_club_10"
-                     android:layout_width="fill_parent"
-                     android:layout_height="fill_parent"
-                     android:layout_gravity="center"
-                     android:scaleType="fitXY"
+        <ImageView android:id="@+id/button_king"
+                   android:layout_width="wrap_content"
+                   android:layout_height="fill_parent"
+                   android:scaleType="fitCenter"
+                   android:adjustViewBounds="true"
                 />
 
-        <de.dengot.dokocounter.SVGImageButton android:id="@+id/button_queen" android:src="@raw/card_club_10"
-                     android:layout_width="fill_parent"
-                     android:layout_height="fill_parent"
-                     android:layout_gravity="center"
-                     android:scaleType="fitStart"
+        <ImageView android:id="@+id/button_queen"
+                   android:layout_width="wrap_content"
+                   android:layout_height="fill_parent"
+                   android:scaleType="fitCenter"
+                   android:adjustViewBounds="true"
                 />
 
-        <de.dengot.dokocounter.SVGImageButton android:id="@+id/button_jack" android:src="@raw/card_club_10"
-                     android:layout_width="fill_parent"
-                     android:layout_height="fill_parent"
-                     android:layout_gravity="center"
-                     android:scaleType="fitCenter"
+        <ImageView android:id="@+id/button_jack"
+                   android:layout_width="wrap_content"
+                   android:layout_height="fill_parent"
+                   android:scaleType="fitCenter"
+                   android:adjustViewBounds="true"
                 />
     </TableRow>
 
-    <TableRow android:layout_weight="1.0"
-              android:layout_height="fill_parent">
+    <TableRow >
 
-        <de.dengot.dokocounter.SVGImageButton android:id="@+id/button_ace" android:src="@raw/card_club_10"
-                     android:layout_width="fill_parent"
-                     android:layout_height="fill_parent"
-                     android:layout_gravity="center"
-                     android:scaleType="center"
+        <ImageView android:id="@+id/button_ace"
+                   android:layout_width="wrap_content"
+                   android:layout_height="fill_parent"
+                   android:scaleType="fitCenter"
+                   android:adjustViewBounds="true"
                 />
 
-        <de.dengot.dokocounter.SVGImageButton android:id="@+id/button_num10" android:src="@raw/card_club_10"
-                     android:layout_width="fill_parent"
-                     android:layout_height="fill_parent"
-                     android:layout_gravity="center"
-                     android:scaleType="centerInside"
+        <ImageView android:id="@+id/button_num10"
+                   android:layout_width="wrap_content"
+                   android:layout_height="fill_parent"
+                   android:scaleType="fitCenter"
+                   android:adjustViewBounds="true"
+                />
+
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                >
+
+        <Button android:id="@+id/button_reset"
+                android:text="Reset"
+                android:background="@android:color/black"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="22sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="10sp"
+                />
+
+            <TextView android:id="@+id/textview_points"
+                      android:text="Punkte: 000"
+                      android:textSize="16sp"
+                      android:textStyle="bold"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:paddingTop="10sp"
+                      android:paddingBottom="5sp"
+                    />
+
+
+        </LinearLayout>
+
+    </TableRow>
+
+
+</TableLayout>
+
+        
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/table_main"
+             android:layout_width="fill_parent"
+             android:layout_height="match_parent"
+             >
+
+    <TableRow android:layout_weight="0.45">
+
+        <ImageView android:id="@+id/button_king" android:src="@raw/card_club_ace"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="match_parent"
+                                              android:layout_gravity="center"
+                                              android:scaleType="fitCenter"
+                                              android:adjustViewBounds="true"
+                />
+
+        <ImageView android:id="@+id/button_queen" android:src="@raw/card_club_ace"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="match_parent"
+                                              android:layout_gravity="center"
+                                              android:scaleType="fitCenter"
+                                              android:adjustViewBounds="true"
+                />
+
+        <ImageView android:id="@+id/button_jack" android:src="@raw/card_club_ace"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="match_parent"
+                                              android:layout_gravity="center"
+                                              android:scaleType="fitCenter"
+                                              android:adjustViewBounds="true"
+                />
+    </TableRow>
+
+    <TableRow android:layout_weight="0.45">
+
+        <ImageView android:id="@+id/button_ace" android:src="@raw/card_club_ace"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="match_parent"
+                                              android:layout_gravity="center"
+                                              android:scaleType="fitCenter"
+                                              android:adjustViewBounds="true"
+                />
+
+        <ImageView android:id="@+id/button_num10" android:src="@raw/card_club_ace"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="match_parent"
+                                              android:layout_gravity="center"
+                                              android:scaleType="fitCenter"
+                                              android:adjustViewBounds="true"
                 />
 
         <Button android:id="@+id/button_reset"
                 android:text="Reset"
-                android:layout_width="wrap_content"
+                android:background="@android:color/black"
+                android:textColor="@android:color/white"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
+                android:layout_gravity="center"
                 android:textSize="20sp"
                 />
+
     </TableRow>
 
-    <!--
-    <TableRow>
+
+    <TableRow android:layout_weight="0.1">
         <TextView android:text="Punkte:"
                   android:textSize="18sp"
                 />
@@ -69,6 +160,7 @@
                   android:textStyle="bold"
                 />
     </TableRow>
-    -->
 
 </TableLayout>
+
+-->

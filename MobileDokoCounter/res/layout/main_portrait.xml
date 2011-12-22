@@ -3,7 +3,7 @@
              android:layout_width="fill_parent"
              android:layout_height="match_parent"
              android:stretchColumns="0,1">
-
+<!--
     <TableRow>
         <ImageButton android:id="@+id/button_king"/>
 
@@ -41,6 +41,8 @@
                   android:textStyle="bold"
                 />
     </TableRow>
+
+-->
 
 </TableLayout>
 

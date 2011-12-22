@@ -11,7 +11,12 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int suits=0x7f020000;
+        public static final int ace=0x7f020000;
+        public static final int jack=0x7f020001;
+        public static final int king=0x7f020002;
+        public static final int queen=0x7f020003;
+        public static final int suits=0x7f020004;
+        public static final int ten=0x7f020005;
     }
     public static final class id {
         public static final int button_ace=0x7f060004;
@@ -39,24 +44,24 @@ public final class R {
         public static final int app_name=0x7f050000;
     }
     public static final class styleable {
-        /** Attributes that can be used with a SVGImageButton.
+        /** Attributes that can be used with a SVGImageView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SVGImageButton_android_src de.dengot.dokocounter:android_src}</code></td><td></td></tr>
+           <tr><td><code>{@link #SVGImageView_android_src de.dengot.dokocounter:android_src}</code></td><td></td></tr>
            </table>
-           @see #SVGImageButton_android_src
+           @see #SVGImageView_android_src
          */
-        public static final int[] SVGImageButton = {
+        public static final int[] SVGImageView = {
             0x01010119
         };
         /**
           <p>This symbol is the offset where the {@link de.dengot.dokocounter.R.attr#android_src}
-          attribute's value can be found in the {@link #SVGImageButton} array.
+          attribute's value can be found in the {@link #SVGImageView} array.
           @attr name android:android_src
         */
-        public static final int SVGImageButton_android_src = 0;
+        public static final int SVGImageView_android_src = 0;
     };
 }

@@ -21,11 +21,11 @@ public class CardImageAdapter extends BaseAdapter {
     };
 
     private int[] buttonIds = new int[]{
-            R.id.button_king,
-            R.id.button_queen,
-            R.id.button_jack,
-            R.id.button_ace,
-            R.id.button_num10
+//            R.id.button_king,
+//            R.id.button_queen,
+//            R.id.button_jack,
+//            R.id.button_ace,
+//            R.id.button_num10
     };
 
     private Context context;
@@ -52,21 +52,21 @@ public class CardImageAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageButton imageButton;
+        ImageView imageView;
         if (convertView == null) {  // if it's not recycled, initialize some attributes
-            imageButton = new ImageButton(this.context);
-            imageButton.setId(buttonIds[position]);
+            imageView = new ImageButton(this.context);
+            imageView.setId(buttonIds[position]);
             //imageButton.setLayoutParams(new GridView.LayoutParams(85, 85));
-            imageButton.setAdjustViewBounds(true);
-            imageButton.setBackgroundColor(Color.BLACK);
-            imageButton.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+            imageView.setAdjustViewBounds(true);
+            imageView.setBackgroundColor(Color.BLACK);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
             //imageButton.setPadding(8, 8, 8, 8);
         } else {
-            imageButton = (ImageButton) convertView;
+            imageView = (ImageButton) convertView;
         }
 
-        imageButton.setImageResource(cardImages[position]);
-        return imageButton;
+        imageView.setImageResource(cardImages[position]);
+        return imageView;
 
     }
 }
